@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
         _plugin.read();
         _plugin.smsStream.listen((event) {
           setState(() {
-            sms = event.body.replaceAll(RegExp(r'[^0-9]'),''); // '23';
+            sms = event.body; // '23';
             sender = event.sender;
             time = event.timeReceived.toString();
 
